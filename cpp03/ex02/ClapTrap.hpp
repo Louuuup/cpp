@@ -6,7 +6,7 @@
 /*   By: ycyr-roy <ycyr-roy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:09:58 by ycyr-roy          #+#    #+#             */
-/*   Updated: 2024/09/18 10:56:46 by ycyr-roy         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:51:46 by ycyr-roy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 class ClapTrap {
 	
 public:
-	ClapTrap(std::string name);
-	~ClapTrap();
+	ClapTrap(std::string name); // Default constructor
+	ClapTrap(const ClapTrap &src); // Copy constructor
+	ClapTrap &operator=(const ClapTrap &other); // Copy assignment operator
+	~ClapTrap(); // Destructor
 	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
